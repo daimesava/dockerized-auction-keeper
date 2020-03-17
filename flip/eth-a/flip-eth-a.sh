@@ -1,4 +1,7 @@
 #!/bin/bash
+
+trap 'exit 2' SIGTERM
+
 dir="$(dirname "$0")"
 
 source environment.sh  # Set the RPC host, account address, keys, and everything else
